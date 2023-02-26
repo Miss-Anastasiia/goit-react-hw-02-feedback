@@ -29,14 +29,13 @@ export default class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const options = Object.keys(this.state);
 
     return (
       <>
         <h1 hidden>Comments</h1>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={options}
+            options={this.state}
             onLeaveFeedback={this.handleClick}
           />
         </Section>
